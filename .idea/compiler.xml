@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="enum_learn_main" target="1.8" />
+      <module name="enum_learn_test" target="1.8" />
+      <module name="learn_main" target="1.8" />
+      <module name="learn_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
