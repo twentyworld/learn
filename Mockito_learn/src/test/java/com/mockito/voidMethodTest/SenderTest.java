@@ -6,8 +6,6 @@ import org.junit.Test;
 import org.junit.Before; 
 import org.junit.After;
 import org.mockito.*;
-
-
 //@RunWith(MockitoJUnitRunner.class)
 public class SenderTest extends SampleBaseTestCase {
     //private Emailer emailer = Mockito.mock(Emailer.class);
