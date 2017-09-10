@@ -1,8 +1,12 @@
 package com.mockito.voidMethodTest; 
 
+
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 import org.junit.Test; 
 import org.junit.Before; 
-import org.junit.After; 
+import org.junit.After;
+import org.mockito.Mockito;
 
 /** 
 * Sender Tester. 
@@ -13,8 +17,11 @@ import org.junit.After;
 */ 
 public class SenderTest { 
 
+
+    Sender sender
 @Before
-public void before() throws Exception { 
+public void before() throws Exception {
+        sender = new Sender();
 } 
 
 @After
@@ -28,7 +35,9 @@ public void after() throws Exception {
 */ 
 @Test
 public void testSend() throws Exception { 
-//TODO: Test goes here... 
+
+    Emailer emailer = Mockito.mock(Emailer.class);
+    when(emailer.send(any())).thenReturn();
 } 
 
 
