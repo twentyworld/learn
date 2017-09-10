@@ -10,21 +10,29 @@ package com.mockito.voidMethodTest;
 public class Sender {
 
     Emailer emailer;
+    User user;
 
-    String name;
-
-    public Sender(String name) {
-        this.name = name;
+    public Sender(User user) {
+        this.user = user;
     }
 
-    public Sender(Emailer emailer, String name) {
-        this.emailer = emailer;
-        this.name = name;
+    public Sender() {
     }
 
     public void send(){
+        System.out.println(user.toString());
         String message = "message";
         emailer.send(message);
     }
 
+
+
+    public void setEmailer(Emailer emailer) {
+        this.emailer = emailer;
+    }
+
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
