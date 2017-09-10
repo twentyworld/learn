@@ -11,13 +11,20 @@ public class Sender {
 
     Emailer emailer;
 
+    String name;
+
+    public Sender(String name) {
+        this.name = name;
+    }
+
+    public Sender(Emailer emailer, String name) {
+        this.emailer = emailer;
+        this.name = name;
+    }
+
     public void send(){
         String message = "message";
         emailer.send(message);
     }
-
-
-
-
 
 }

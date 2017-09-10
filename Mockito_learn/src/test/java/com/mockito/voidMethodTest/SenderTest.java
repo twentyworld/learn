@@ -23,7 +23,6 @@ public class SenderTest {
     @Mock private Emailer emailer;
     @Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
     @InjectMocks private Sender sender;
-
     @Before public void before() throws Exception { }
 
     @After public void after() throws Exception { }
@@ -35,4 +34,5 @@ public class SenderTest {
         sender.send();
         verify(emailer).send(anyString());
     }
+
 }
