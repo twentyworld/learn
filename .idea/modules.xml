@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mockito_learn.iml" filepath="$PROJECT_DIR$/.idea/modules/Mockito_learn.iml" group="Mockito_learn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mockito_learn/Mockito_learn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Mockito_learn/Mockito_learn_main.iml" group="Mockito_learn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Mockito_learn/Mockito_learn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Mockito_learn/Mockito_learn_test.iml" group="Mockito_learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/enum_learn.iml" filepath="$PROJECT_DIR$/.idea/modules/enum_learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/enum_learn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/enum_learn_main.iml" group="enum_learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/enum_learn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/enum_learn_test.iml" group="enum_learn" />
