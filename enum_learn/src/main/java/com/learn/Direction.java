@@ -17,6 +17,7 @@ public class Direction {
     public Direction(int id, Enums enums) {
         this.id = id;
         this.enums = enums;
+
     }
 
     public int getId() {

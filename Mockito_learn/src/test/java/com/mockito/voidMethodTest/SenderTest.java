@@ -1,11 +1,15 @@
-package com.mockito.voidMethodTest; 
+package com.mockito.voidMethodTest;
 
 import static org.mockito.Mockito.*;
 
 import org.junit.Test;
-import org.junit.Before; 
+import org.junit.Before;
 import org.junit.After;
 import org.mockito.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 //@RunWith(MockitoJUnitRunner.class)
 public class SenderTest extends SampleBaseTestCase {
     //private Emailer emailer = Mockito.mock(Emailer.class);
@@ -13,10 +17,18 @@ public class SenderTest extends SampleBaseTestCase {
     //@Rule public MockitoRule mockitoRule = MockitoJUnit.rule();
     private User user_instance = new User(12,"12");
 
+
+    @Mock Id id = mock(Id.class);
+    @Mock String string;
+    //@Mock Account account;
     @Spy private User user = spy(user_instance);
     @Mock  private Emailer emailer;
-    @InjectMocks private Sender sender = new Sender();
-    @Before public void before() throws Exception { }
+    @InjectMocks private Sender sender = new Sender(id);
+    @Before public void before() throws Exception {
+        when(id.getId()).thenReturn("that");
+        //when(sender.getNaming()).thenReturn(getId());
+        when(string.toLowerCase()).thenReturn("lower");
+    }
 
     @After public void after() throws Exception { }
     /**
@@ -30,6 +42,12 @@ public class SenderTest extends SampleBaseTestCase {
         verify(emailer).send(anyString());
         //verify(emailer,never()).send(anyString());
     }
+
+//    public List<Id> getId(){
+//        List<Id> list = new ArrayList<>();
+//        list.add(new Id("id"));
+//        return list;
+//    }
 
 }
 
