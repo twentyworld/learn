@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Mockito_learn" />
+            <option value="$PROJECT_DIR$/SessionCookieExample" />
           </set>
         </option>
       </GradleProjectSettings>

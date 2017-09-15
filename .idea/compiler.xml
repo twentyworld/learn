@@ -8,6 +8,8 @@
       <module name="learn_test" target="1.8" />
       <module name="Mockito_learn_main" target="1.8" />
       <module name="Mockito_learn_test" target="1.8" />
+      <module name="SessionCookieExample_main" target="1.8" />
+      <module name="SessionCookieExample_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
