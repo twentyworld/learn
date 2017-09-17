@@ -8,5 +8,5 @@ package com.mockito.voidMethodTest;
  * from win.
  */
 public interface Spide {
-    public void getName();
+    void getName();
 }
