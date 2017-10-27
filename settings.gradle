@@ -1,4 +1,6 @@
 rootProject.name = 'learn'
 include 'Mockito_learn'
 include 'SessionCookieExample'
+include 'SpringLearn'
+include 'NIO'
 

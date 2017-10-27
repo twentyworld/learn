@@ -19,7 +19,7 @@ public class SenderTest extends SampleBaseTestCase {
 
 
     @Mock Id id = mock(Id.class);
-    @Mock String string;
+    //@Mock String string;
     //@Mock Account account;
     @Spy private User user = spy(user_instance);
     @Mock  private Emailer emailer;
@@ -27,7 +27,7 @@ public class SenderTest extends SampleBaseTestCase {
     @Before public void before() throws Exception {
         when(id.getId()).thenReturn("that");
         //when(sender.getNaming()).thenReturn(getId());
-        when(string.toLowerCase()).thenReturn("lower");
+        //when(string.toLowerCase()).thenReturn("lower");
     }
 
     @After public void after() throws Exception { }
@@ -48,6 +48,16 @@ public class SenderTest extends SampleBaseTestCase {
 //        list.add(new Id("id"));
 //        return list;
 //    }
+    @Test
+    public void testList(){
+        List<String> list = mock(ArrayList.class);
+        String str = list.get(0);
+        //when(str).thenReturn("this");
+
+        doReturn("THIS").when(list).get(0);
+        System.out.println(list.get(0));
+
+    }
 
 }
 
