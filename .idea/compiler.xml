@@ -10,6 +10,8 @@
       <module name="Mockito_learn_test" target="1.8" />
       <module name="NIO_main" target="1.8" />
       <module name="NIO_test" target="1.8" />
+      <module name="Oauth2Learn_main" target="1.8" />
+      <module name="Oauth2Learn_test" target="1.8" />
       <module name="SessionCookieExample_main" target="1.8" />
       <module name="SessionCookieExample_test" target="1.8" />
       <module name="SpringLearn_main" target="1.8" />

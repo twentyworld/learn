@@ -8,6 +8,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/NIO.iml" filepath="$PROJECT_DIR$/.idea/modules/NIO.iml" group="NIO" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/NIO/NIO_main.iml" filepath="$PROJECT_DIR$/.idea/modules/NIO/NIO_main.iml" group="NIO" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/NIO/NIO_test.iml" filepath="$PROJECT_DIR$/.idea/modules/NIO/NIO_test.iml" group="NIO" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Oauth2Learn.iml" filepath="$PROJECT_DIR$/.idea/modules/Oauth2Learn.iml" group="Oauth2Learn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn_main.iml" group="Oauth2Learn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn_test.iml" group="Oauth2Learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SessionCookieExample.iml" filepath="$PROJECT_DIR$/.idea/modules/SessionCookieExample.iml" group="SessionCookieExample" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SessionCookieExample/SessionCookieExample_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SessionCookieExample/SessionCookieExample_main.iml" group="SessionCookieExample" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SessionCookieExample/SessionCookieExample_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SessionCookieExample/SessionCookieExample_test.iml" group="SessionCookieExample" />

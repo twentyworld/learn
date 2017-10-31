@@ -47,6 +47,7 @@ public class IOlearn {
             }
         }
     }
+
     public static void method1(File file){
         RandomAccessFile aFile = null;
         try{
