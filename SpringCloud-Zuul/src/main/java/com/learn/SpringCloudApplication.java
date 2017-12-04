@@ -30,6 +30,8 @@ import java.security.cert.CertificateException;
  * from win.
  */
 @SpringBootApplication
+@EnableEurekaClient
+@EnableZuulProxy
 public class SpringCloudApplication {
     public static void main(String[] args) {
         SpringApplication.run(SpringCloudApplication.class,args);
