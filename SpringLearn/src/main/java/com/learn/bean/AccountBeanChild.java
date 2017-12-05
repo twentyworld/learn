@@ -1,30 +1,23 @@
 package com.learn.bean;
 
 /**
- * Created by teemper on 2017/10/23, 21:42.
+ * Created by teemper on 2017/12/5, 23:30.
  *
  * @auther Zed.
  * copy as you like, but with these words.
  * from win.
  */
-public class AccountBean {
+public class AccountBeanChild {
     private String message;
-    private int id;
+    private Integer id;
+    private String password;
 
-    public AccountBean() {
+    public String getPassword() {
+        return password;
     }
 
-    public AccountBean(String message, int id) {
-        this.message = message;
-        this.id = id;
-    }
-
-    public void setMessage(String message){
-        this.message  = message;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getMessage() {
@@ -35,10 +28,17 @@ public class AccountBean {
         return id;
     }
 
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public void init(){
         System.out.println("init");
     }
-
     public void initial(){
         System.out.println("initial");
     }
@@ -46,4 +46,5 @@ public class AccountBean {
     public void destroy(){
         System.out.println("destroy");
     }
+
 }

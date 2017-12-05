@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+        default-init-method="init" default-destroy-method="destroy"
+>
 
 
-    <bean id="helloWorld" class="com.learn.bean.AccountBean">
+    <bean id="beanTemplate" abstract="true">
         <property name="message" value="Hello World!"/>
+        <property name="id" value="123"/>
     </bean>
+
+    <bean id="accountBean" class="com.learn.bean.AccountBean" init-method="initial" destroy-method="destroy" parent="beanTemplate">
+        <!--<property name="message" value="Hello World!"/>-->
+        <!--<property name="id" value="123"/>-->
+    </bean>
+
+    <bean id="accountBean1" class="com.learn.bean.AccountBean" scope="prototype">
+        <constructor-arg name="message" value="Hello World!"/>
+        <constructor-arg name="id" value="123"/>
+    </bean>
+
+    <bean id="accountBean2" class="com.learn.bean.AccountBean" scope="prototype" p:message="Hello World!" p:id="123">
+    </bean>
+
+    <bean id="accountBeanChild" class="com.learn.bean.AccountBeanChild" parent="accountBean">
+        <!--<property name="message" value="Hello child"/>-->
+        <property name="id">
+            <bean class="java.lang.Integer">
+                <constructor-arg type="java.lang.String" value="234"/>
+            </bean>
+        </property>
+        <property name="password" value="password"/>
+    </bean>
+
+    <!--<bean id="beanImplBeanPostProcessor" class="com.learn.bean.BeanImplBeanPostProcessor"/>-->
+
 </beans>
