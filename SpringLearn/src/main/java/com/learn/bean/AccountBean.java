@@ -46,4 +46,9 @@ public class AccountBean {
     public void destroy(){
         System.out.println("destroy");
     }
+
+    @Override
+    public String toString() {
+        return "AccountBean{" + "message='" + message + '\'' + ", id=" + id + '}';
+    }
 }

@@ -12,6 +12,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 
 import javax.sql.DataSource;
+import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -53,26 +55,49 @@ public class MybatisApplication implements CommandLineRunner {
         primaryDataSourcePopulator.addScript(new ClassPathResource("db/schema.sql"));
         primaryDataSourcePopulator.execute(primaryDataSource);
 
-        SqlSession primarySqlSession = primarySqlSessionFactory.openSession();
+        ResourceDatabasePopulator secondaryDataSourcePopulator = new ResourceDatabasePopulator();
+        secondaryDataSourcePopulator.addScript(new ClassPathResource("db/schema.sql"));
+        secondaryDataSourcePopulator.execute(secondaryDataSource);
+
+        primaryDataSourceExecute();
+        secondaryDataSourceExecute();
+    }
+
+
+    public void primaryDataSourceExecute(){
+        SqlSession primarySqlSession = primarySqlSessionFactory.openSession(true);
         UserMapper primaryUserMapper = primarySqlSession.getMapper(UserMapper.class);
 
         primaryUserMapper.insertUser(1,"name");
         primaryUserMapper.insertUser(2,"name");
         primaryUserMapper.insertUser(3,"name");
+
+        System.out.println("*********************************************************************************");
+        System.out.println("primaryDataSourceExecute..get User by mapper:");
         System.out.println(primaryUserMapper.findByName("name"));
+        System.out.println(primaryUserMapper.findNameByName("name"));
+        List<Map<String,String>> lists = primaryUserMapper.findNameByName("name");
+        for (Map<String,String> map:lists) {
+            System.out.println(map.get("NAMES"));
+        }
+//        System.out.println("*********************************************************************************");
+//        System.out.println("get User by SqlSession:");
+//        String sql = "SELECT * FROM USER WHERE ID = 1;";
+//        Map<String, Integer> map = new HashMap<>();
+//        map.put("name",1);
+//        List<User> userList = primarySqlSession.selectList(sql,map);
+//        System.out.println(userList);
 
+    }
 
-        ResourceDatabasePopulator secondaryDataSourcePopulator = new ResourceDatabasePopulator();
-        secondaryDataSourcePopulator.addScript(new ClassPathResource("db/schema.sql"));
-        secondaryDataSourcePopulator.execute(secondaryDataSource);
-
-        SqlSession secondarySqlSession = secondarySqlSessionFactory.openSession();
+    public void secondaryDataSourceExecute(){
+        SqlSession secondarySqlSession = secondarySqlSessionFactory.openSession(true);
         UserMapper secondaryUserMapper = secondarySqlSession.getMapper(UserMapper.class);
 
+        System.out.println("*********************************************************************************");
+        System.out.println("secondaryDataSourceExecute..get User by mapper:");
         secondaryUserMapper.insertUser(1,"name");
         System.out.println(secondaryUserMapper.findByName("name"));
 
     }
-
-
 }

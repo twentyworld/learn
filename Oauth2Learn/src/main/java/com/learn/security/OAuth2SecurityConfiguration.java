@@ -5,7 +5,6 @@ import com.learn.config.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -37,28 +36,40 @@ public class OAuth2SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	@Autowired
 	private ClientDetailsService clientDetailsService;
 
-	@Autowired
-	private RedisConnectionFactory redisConnection;
+//	@Autowired
+//	private RedisConnectionFactory redisConnection;
 
 	@Bean
 	public MyUserDetailsService myUserDetailsService(){
 		return new MyUserDetailsService();
 	}
-	@Autowired
-    public void globalUserDetails(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-			.userDetailsService(myUserDetailsService())
-			.passwordEncoder(new Md5PasswordEncoder());
-    }
+//	@Autowired
+//    public void globalUserDetails(AuthenticationManagerBuilder auth) throws Exception {
+//        auth
+//			.userDetailsService(myUserDetailsService())
+//			.passwordEncoder(new Md5PasswordEncoder());
+//    }
 
+
+	/**
+	 * 在内存中创建两个用户
+	 * @param auth
+	 * @throws Exception
+	 */
+	@Autowired
+	public void globalUserDetails(AuthenticationManagerBuilder auth) throws Exception {
+		auth.inMemoryAuthentication()
+				.withUser("bill").password("abc123").roles("admin1").and()
+				.withUser("bob").password("abc123").roles("USER");
+	}
 
     @Override
-    protected void configure(HttpSecurity http) throws Exception {
+	protected void configure(HttpSecurity http) throws Exception {
 		http
-		.anonymous().disable()
-	  	.authorizeRequests()
-	  	.antMatchers("/oauth/token").permitAll();
-    }
+				.anonymous().disable()
+				.authorizeRequests()
+				.antMatchers("/oauth/token").permitAll();
+	}
 
     @Override
     @Bean

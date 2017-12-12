@@ -1,15 +1,15 @@
 package com.learn.bean;
 
 
-import static org.junit.Assert.*;
-
-import javafx.application.Application;
 import org.junit.Test;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
+
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by teemper on 2017/12/5, 21:25.
@@ -76,5 +76,41 @@ public class LoadBeanTest {
         //this is what you should focus.
         assertTrue(accountBeanChild.getId() == 234);
         assertTrue(accountBeanChild.getPassword().equals("password"));
+    }
+
+    @Test
+    public void TestBeanList(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:beanConfiguration/beans.xml");
+        AccountBeanList accountBeanList = (AccountBeanList) context.getBean("accountBeanList");
+
+        assertTrue(accountBeanList.getAccountBeanList().size()==2);
+        assertTrue(accountBeanList.getAccountBeanList().get(0).getMessage().equals("Hello World!"));
+        assertTrue(accountBeanList.getAccountBeanList().get(1).getId() == 123);
+    }
+
+    @Test
+    public void TestXmlAutowire(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:beanConfiguration/beans.xml");
+        Product product = (Product)context.getBean("product");
+
+        assertTrue(product.getAccountBean().getId()==123);
+        assertTrue(product.getName().equals("name"));
+    }
+
+    @Test
+    public void TestAnnotationAutowire(){
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath:beanConfiguration/beans.xml");
+        Product product = (Product)context.getBean("product2");
+        assertTrue(product.getAccountBean().getId()==123);
+        assertTrue(product.getName().equals("name"));
+    }
+
+    @Test
+    public void TestAnnotationConfiguration(){
+
+        ApplicationContext context = new AnnotationConfigApplicationContext(AccountBeanConfiguration.class);
+
+        AccountBean accountBean = context.getBean(AccountBean.class);
+        assertTrue(accountBean.getMessage().equals("string"));
     }
 }

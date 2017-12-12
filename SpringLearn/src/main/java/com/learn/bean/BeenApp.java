@@ -1,7 +1,4 @@
-package com.learn;
-
-import com.learn.bean.AccountBean;
-import org.springframework.context.ApplicationContext;
+package com.learn.bean;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd"
         default-init-method="init" default-destroy-method="destroy"
 >
+    <context:annotation-config/>
+
+
+
+
+
+
 
 
     <bean id="beanTemplate" abstract="true">
@@ -31,6 +43,24 @@
             </bean>
         </property>
         <property name="password" value="password"/>
+    </bean>
+
+    <bean id="accountBeanList" class="com.learn.bean.AccountBeanList" autowire="byName">
+        <property name="name" value="name"/>
+        <property name="accountBeanList">
+            <list>
+                <ref bean="accountBean"/>
+                <ref bean="accountBean1"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="product" class="com.learn.bean.Product" autowire="byName">
+        <property name="name" value="name"/>
+    </bean>
+
+    <bean id="product2" class="com.learn.bean.Product">
+        <property name="name" value="name"/>
     </bean>
 
     <!--<bean id="beanImplBeanPostProcessor" class="com.learn.bean.BeanImplBeanPostProcessor"/>-->
