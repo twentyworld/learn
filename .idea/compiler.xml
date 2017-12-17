@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="enum_learn_main" target="1.8" />
       <module name="enum_learn_test" target="1.8" />
+      <module name="JavaListenerLearn_main" target="1.8" />
+      <module name="JavaListenerLearn_test" target="1.8" />
       <module name="learn_main" target="1.8" />
       <module name="learn_test" target="1.8" />
       <module name="Mockito_learn_main" target="1.8" />
@@ -14,8 +16,30 @@
       <module name="Oauth2Learn_test" target="1.8" />
       <module name="SessionCookieExample_main" target="1.8" />
       <module name="SessionCookieExample_test" target="1.8" />
+      <module name="SpringBootMybatis_main" target="1.8" />
+      <module name="SpringBootMybatis_test" target="1.8" />
+      <module name="SpringBootSSL_main" target="1.8" />
+      <module name="SpringBootSSL_test" target="1.8" />
+      <module name="SpringCloud-Client1_main" target="1.8" />
+      <module name="SpringCloud-Client1_test" target="1.8" />
+      <module name="SpringCloud-Client2_main" target="1.8" />
+      <module name="SpringCloud-Client2_test" target="1.8" />
+      <module name="SpringCloud-Eureka_main" target="1.8" />
+      <module name="SpringCloud-Eureka_test" target="1.8" />
+      <module name="SpringCloud-Zuul_main" target="1.8" />
+      <module name="SpringCloud-Zuul_test" target="1.8" />
+      <module name="SpringCloudConfigClient2_main" target="1.8" />
+      <module name="SpringCloudConfigClient2_test" target="1.8" />
+      <module name="SpringCloudConfigClient_main" target="1.8" />
+      <module name="SpringCloudConfigClient_test" target="1.8" />
+      <module name="SpringCloudConfigServer_main" target="1.8" />
+      <module name="SpringCloudConfigServer_test" target="1.8" />
+      <module name="SpringCloudLearn_main" target="1.8" />
+      <module name="SpringCloudLearn_test" target="1.8" />
       <module name="SpringLearn_main" target="1.8" />
       <module name="SpringLearn_test" target="1.8" />
+      <module name="SpringSecurityLearn_main" target="1.8" />
+      <module name="SpringSecurityLearn_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
