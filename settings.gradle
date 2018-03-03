@@ -13,4 +13,8 @@ include 'SpringBootSSL'
 include 'SpringCloudConfigServer'
 include 'SpringCloudConfigClient'
 include 'SpringCloudConfigClient2'
+include 'SpringCloudStreamLearn'
+include 'JavaSELearn'
+include 'NettyLearn'
+include 'JDKlearn'
 

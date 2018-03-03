@@ -5,11 +5,13 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/JDKlearn" />
             <option value="$PROJECT_DIR$/JavaListenerLearn" />
+            <option value="$PROJECT_DIR$/JavaSELearn" />
+            <option value="$PROJECT_DIR$/NettyLearn" />
             <option value="$PROJECT_DIR$/Oauth2Learn" />
             <option value="$PROJECT_DIR$/SpringBootMybatis" />
             <option value="$PROJECT_DIR$/SpringBootSSL" />
@@ -21,6 +23,7 @@
             <option value="$PROJECT_DIR$/SpringCloudConfigClient2" />
             <option value="$PROJECT_DIR$/SpringCloudConfigServer" />
             <option value="$PROJECT_DIR$/SpringCloudLearn" />
+            <option value="$PROJECT_DIR$/SpringCloudStreamLearn" />
             <option value="$PROJECT_DIR$/SpringLearn" />
             <option value="$PROJECT_DIR$/SpringSecurityLearn" />
           </set>
