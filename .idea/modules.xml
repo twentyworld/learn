@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn.iml" filepath="$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn.iml" group="Oauth2Learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn_main.iml" group="Oauth2Learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Oauth2Learn/Oauth2Learn_test.iml" group="Oauth2Learn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Spring Security.iml" filepath="$PROJECT_DIR$/.idea/modules/Spring Security.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBootMybatis/SpringBootMybatis.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBootMybatis/SpringBootMybatis.iml" group="SpringBootMybatis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBootMybatis/SpringBootMybatis_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBootMybatis/SpringBootMybatis_main.iml" group="SpringBootMybatis" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringBootMybatis/SpringBootMybatis_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringBootMybatis/SpringBootMybatis_test.iml" group="SpringBootMybatis" />
@@ -56,6 +57,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringSecurityLearn/SpringSecurityLearn.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringSecurityLearn/SpringSecurityLearn.iml" group="SpringSecurityLearn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringSecurityLearn/SpringSecurityLearn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringSecurityLearn/SpringSecurityLearn_main.iml" group="SpringSecurityLearn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SpringSecurityLearn/SpringSecurityLearn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SpringSecurityLearn/SpringSecurityLearn_test.iml" group="SpringSecurityLearn" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Spring Security/Spring_Security.iml" filepath="$PROJECT_DIR$/.idea/modules/Spring Security/Spring_Security.iml" group="Spring Security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Spring Security/Spring_Security_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Spring Security/Spring_Security_main.iml" group="Spring Security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Spring Security/Spring_Security_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Spring Security/Spring_Security_test.iml" group="Spring Security" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/learn.iml" filepath="$PROJECT_DIR$/.idea/modules/learn.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/learn_main.iml" filepath="$PROJECT_DIR$/.idea/modules/learn_main.iml" group="learn" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/learn_test.iml" filepath="$PROJECT_DIR$/.idea/modules/learn_test.iml" group="learn" />

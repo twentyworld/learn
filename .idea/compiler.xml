@@ -22,6 +22,8 @@
       <module name="Oauth2Learn_test" target="1.8" />
       <module name="SessionCookieExample_main" target="1.8" />
       <module name="SessionCookieExample_test" target="1.8" />
+      <module name="Spring_Security_main" target="1.8" />
+      <module name="Spring_Security_test" target="1.8" />
       <module name="SpringBootMybatis_main" target="1.8" />
       <module name="SpringBootMybatis_test" target="1.8" />
       <module name="SpringBootSSL_main" target="1.8" />

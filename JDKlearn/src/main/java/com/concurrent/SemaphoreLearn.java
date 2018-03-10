@@ -15,7 +15,7 @@ public class SemaphoreLearn {
     public static void main(String[] args) {
 
         CountDownLatch countDownLatch = new CountDownLatch(10);
-        Semaphore semaphore = new Semaphore(3);
+        Semaphore semaphore = new Semaphore(3,true);
 
         for(int i = 0;i<10;i++) {
             new Thread(new SemaphoreThread(countDownLatch,semaphore)).start();
