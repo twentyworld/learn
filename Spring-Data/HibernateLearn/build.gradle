@@ -1,0 +1,23 @@
+group 'Learn'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    // maven库
+    def cn = "http://maven.aliyun.com/nexus/content/groups/public/"
+    def abroad = "http://central.maven.org/maven2/"
+    // 先从url中下载jar若没有找到，则在artifactUrls中寻找
+    maven {
+        url cn
+        artifactUrls abroad
+    }
+}
+
+dependencies {
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.9-rc'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.14.Final'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
