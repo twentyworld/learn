@@ -1,13 +1,31 @@
 group 'Learn'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "http://repo.spring.io/libs-snapshot-local" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
+    }
 }
+apply plugin: 'spring-boot'
+apply plugin: 'idea'
+ext {
+    name = 'Spring Cloud Client'
+    description = 'Spring Cloud Client demo project'
+    version='0.0.1-SNAPSHOT'
+    sourceEncoding='UTF-8'
+}
+repositories {
+    jcenter()
+    maven { url 'https://repo.spring.io/release/' }
+    maven { url "http://repo.spring.io/libs-snapshot-local" }
+    maven { url "http://repo.spring.io/libs-milestone-local" }
+    maven { url "http://repo.spring.io/libs-release-local" }
+}
+
 
 dependencies {
     // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka

@@ -19,7 +19,7 @@ public class DoorManager {
      * @param listener
      *            DoorListener
      */
-    public void addDoorListener(DoorListener listener) {
+    public void addDoorListener(ListenerImpl listener) {
         if (listeners == null) {
             listeners = new HashSet<>();
         }

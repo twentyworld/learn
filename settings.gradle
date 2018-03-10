@@ -1,7 +1,6 @@
 rootProject.name = 'learn'
 include 'Oauth2Learn'
 include 'JavaListenerLearn'
-include 'JavaSELearn'
 include 'NettyLearn'
 include 'JDKlearn'
 

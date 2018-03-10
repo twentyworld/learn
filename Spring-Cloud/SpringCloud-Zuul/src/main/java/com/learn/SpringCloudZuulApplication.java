@@ -32,9 +32,9 @@ import java.security.cert.CertificateException;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableZuulProxy
-public class SpringCloudApplication {
+public class SpringCloudZuulApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudApplication.class,args);
+        SpringApplication.run(SpringCloudZuulApplication.class,args);
     }
 
     @Bean

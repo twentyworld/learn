@@ -23,9 +23,9 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class SpringCloudApplication {
+public class SpringCloudClient2Application {
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudApplication.class,args);
+        SpringApplication.run(SpringCloudClient2Application.class,args);
     }
 
     @RequestMapping(value = "sayHello",method = RequestMethod.GET,produces = "application/json")

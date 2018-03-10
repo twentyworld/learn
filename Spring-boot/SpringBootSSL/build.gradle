@@ -1,12 +1,30 @@
 group 'Learn'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "http://repo.spring.io/libs-snapshot-local" }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
+    }
+}
 
-sourceCompatibility = 1.8
-
+apply plugin: 'spring-boot'
+apply plugin: 'idea'
+ext {
+    name = 'Springboot SSL'
+    description = 'Springboot SSL demo project'
+    version='0.0.1-SNAPSHOT'
+    sourceEncoding='UTF-8'
+}
 repositories {
-    mavenCentral()
+    jcenter()
+    maven { url 'https://repo.spring.io/release/' }
+    maven { url "http://repo.spring.io/libs-snapshot-local" }
+    maven { url "http://repo.spring.io/libs-milestone-local" }
+    maven { url "http://repo.spring.io/libs-release-local" }
 }
 
 dependencies {
@@ -14,6 +32,6 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.8.RELEASE'
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'
     compile group: 'commons-io', name: 'commons-io', version: '2.4'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.4.3.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.8.RELEASE'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

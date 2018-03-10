@@ -38,7 +38,7 @@ import static org.junit.Assert.assertThat;
  * Integration test that uses the embedded Tomcat instance configured by this Spring Boot app
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = EverythingSSLApplication.class)
+@SpringApplicationConfiguration(classes = SpringBootSSLApplication.class)
 @WebIntegrationTest(randomPort = true)
 @TestPropertySource(locations = "classpath:integration-test.properties")
 public class ITEverythingSSL {

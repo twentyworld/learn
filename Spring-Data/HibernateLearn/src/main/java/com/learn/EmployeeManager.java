@@ -3,7 +3,6 @@ package com.learn;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
 
-import java.util.Iterator;
 import java.util.List;
 
 public class EmployeeManager {

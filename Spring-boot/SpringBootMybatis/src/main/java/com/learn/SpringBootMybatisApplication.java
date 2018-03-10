@@ -24,9 +24,9 @@ import java.util.Map;
  * from win.
  */
 @SpringBootApplication
-public class MybatisApplication implements CommandLineRunner {
+public class SpringBootMybatisApplication implements CommandLineRunner {
     public static void main(String[] args) {
-        SpringApplication.run(MybatisApplication.class,args);
+        SpringApplication.run(SpringBootMybatisApplication.class,args);
     }
 
     @Autowired
