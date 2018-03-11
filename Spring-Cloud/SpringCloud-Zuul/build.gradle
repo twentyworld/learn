@@ -32,7 +32,5 @@ dependencies {
 // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-zuul
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zuul', version: '1.4.0.RELEASE'
 
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.8.RELAESE'
-
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
