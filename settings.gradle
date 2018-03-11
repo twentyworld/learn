@@ -3,6 +3,7 @@ include 'Oauth2Learn'
 include 'JavaListenerLearn'
 include 'NettyLearn'
 include 'JDKlearn'
+include 'Spring-ApplicationListener-Event'
 
 include 'Spring-Data'
 include 'Spring-Data:HibernateLearn'
@@ -20,16 +21,18 @@ findProject(':Spring-Cloud:SpringCloud-Client2')?.name = 'SpringCloud-Client2'
 include 'Spring-Cloud:SpringCloud-Zuul'
 findProject(':Spring-Cloud:SpringCloud-Zuul')?.name = 'SpringCloud-Zuul'
 
-
 include 'Spring-Framework'
 include 'Spring-Framework:SpringLearn'
 findProject(':Spring-Framework:SpringLearn')?.name = 'SpringLearn'
 include 'Spring-Framework:SpringSecurityLearn'
 findProject(':Spring-Framework:SpringSecurityLearn')?.name = 'SpringSecurityLearn'
+include 'Spring-Framework:Spring-ApplicationListner-Event'
+findProject(':Spring-Framework:Spring-ApplicationListner-Event')?.name = 'Spring-ApplicationListner-Event'
 
 include 'Spring-boot'
 include 'Spring-boot:SpringBootMybatis'
 findProject(':Spring-boot:SpringBootMybatis')?.name = 'SpringBootMybatis'
 include 'Spring-boot:SpringBootSSL'
 findProject(':Spring-boot:SpringBootSSL')?.name = 'SpringBootSSL'
+include 'Spring-ApplicationListener-Event'
 
