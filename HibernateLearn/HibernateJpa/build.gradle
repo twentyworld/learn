@@ -14,3 +14,4 @@ dependencies {
     compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.14.Final'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
