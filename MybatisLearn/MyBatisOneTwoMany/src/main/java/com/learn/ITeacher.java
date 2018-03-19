@@ -1,3 +1,5 @@
+package com.learn;
+
 public interface ITeacher {
     public Teacher queryOneTeacher(Long id);
 

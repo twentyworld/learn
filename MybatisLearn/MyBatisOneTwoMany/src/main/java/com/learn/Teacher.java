@@ -1,3 +1,7 @@
+package com.learn;
+
+import com.learn.Student;
+
 import java.util.List;
 
 public class Teacher {
@@ -52,7 +56,7 @@ public class Teacher {
 
     @Override
     public String toString() {
-        return "Teacher{" +
+        return "com.learn.Teacher{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", course='" + course + '\'' +

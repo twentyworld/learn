@@ -1,3 +1,5 @@
+package com.learn;
+
 public class Student {
     private Long id;
     private String name;
@@ -60,7 +62,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "com.learn.Student{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", sex=" + sex +

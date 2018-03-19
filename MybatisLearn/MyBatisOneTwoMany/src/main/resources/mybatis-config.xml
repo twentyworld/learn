@@ -24,8 +24,8 @@
     </environments>
 
     <mappers>
-        <mapper resource="mapper/Student.xml" />
-        <mapper resource="mapper/Teacher.xml" />
+        <mapper resource="mapper/com.learn.Student.xml" />
+        <mapper resource="mapper/com.learn.Teacher.xml" />
     </mappers>
 
 </configuration>

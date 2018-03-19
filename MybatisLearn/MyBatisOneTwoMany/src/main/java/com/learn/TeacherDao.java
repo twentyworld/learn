@@ -1,3 +1,8 @@
+package com.learn;
+
+import com.learn.ITeacher;
+import com.learn.MyBatisUtils;
+import com.learn.Teacher;
 import org.apache.ibatis.session.SqlSession;
 
 import java.io.IOException;

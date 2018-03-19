@@ -1,3 +1,5 @@
+package com.learn;
+
 public class PageInfo {
     private int pageNo = 1;// 当前页编号
     private int dbIndex = 0;// 起始行，通常该属性通过pageNo和pageSize计算得到
@@ -55,7 +57,7 @@ public class PageInfo {
 
     @Override
     public String toString() {
-        return "PageInfo [pageNo=" + pageNo + ", dbIndex=" + dbIndex + ", pageSize=" + pageSize + ", totalReacordNumber="
+        return "com.learn.PageInfo [pageNo=" + pageNo + ", dbIndex=" + dbIndex + ", pageSize=" + pageSize + ", totalReacordNumber="
                 + totalReacordNumber + ", totalPageNumber=" + totalPageNumber + "]";
     }
 
