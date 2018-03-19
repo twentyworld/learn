@@ -3,6 +3,7 @@ include 'Oauth2Learn'
 include 'JavaListenerLearn'
 include 'NettyLearn'
 include 'JDKlearn'
+include 'MybatisLearn'
 
 
 include 'HibernateLearn'
