@@ -1,5 +1,7 @@
 package com.concurrent;
 
+import com.concurrent.thread.CyclicBarrierThread;
+
 import java.util.concurrent.CyclicBarrier;
 
 /**

@@ -1,5 +1,7 @@
 package com.concurrent;
 
+import com.concurrent.thread.CountDownLatchThread;
+
 import java.util.concurrent.CountDownLatch;
 
 /**

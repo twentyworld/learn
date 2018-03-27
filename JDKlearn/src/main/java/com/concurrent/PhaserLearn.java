@@ -1,5 +1,7 @@
 package com.concurrent;
 
+import com.concurrent.thread.PhaserThread;
+
 import java.util.concurrent.Phaser;
 
 /**

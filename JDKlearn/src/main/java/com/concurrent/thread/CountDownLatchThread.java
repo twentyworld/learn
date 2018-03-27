@@ -1,23 +1,20 @@
-package com.concurrent;
+package com.concurrent.thread;
 
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.Semaphore;
 
 /**
- * Created by teemper on 2018/3/3, 17:19.
+ * Created by teemper on 2018/3/3, 14:58.
  *
  * @auther Zed.
  * copy as you like, but with these words.
  * from win.
  */
-public class SemaphoreThread implements Runnable {
+public class CountDownLatchThread implements Runnable {
 
     private CountDownLatch countDownLatch;
-    private Semaphore semaphore;
 
-    public SemaphoreThread(CountDownLatch countDownLatch, Semaphore semaphore) {
+    public CountDownLatchThread(CountDownLatch countDownLatch) {
         this.countDownLatch = countDownLatch;
-        this.semaphore = semaphore;
     }
 
     /**
@@ -32,18 +29,17 @@ public class SemaphoreThread implements Runnable {
      * @see Thread#run()
      */
     @Override
-    public void run() {
+    public void run( ) {
+
+        System.out.println("线程："+ Thread.currentThread().getName()+" is running.");
         try {
-            semaphore.acquire();
-            System.out.println("thread: " +Thread.currentThread().getName()+"is asking a new acquirement.");
             Thread.sleep(1000);
-            System.out.println("thread: " +Thread.currentThread().getName()+"release the acquirement.");
+            System.out.println("线程："+ Thread.currentThread().getName()+" finished.");
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }finally {
             countDownLatch.countDown();
-            semaphore.release();
         }
 
     }
