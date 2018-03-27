@@ -44,13 +44,18 @@ public class TestMyClassLoader {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                MyClassLoader classLoader = new MyClassLoader("C:\\Users\\w\\Desktop\\test");
+                MyClassLoader classLoader = new MyClassLoader("C:\\Users\\w\\IdeaProjects\\learns\\JDKlearn\\src\\main\\resources\\classFile\\tsi");
+                System.out.println();
                 Class classes = null;
                 try {
                     classes = classLoader.loadClass("com.classloader.test.Test");
+                    System.out.println(classes.getClassLoader().toString());
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
+//                Class classes = classLoader.findClass("com.classloader.test.Test");
+//                System.out.println(classes.getClassLoader().toString());
+
                 try {
                     Object object = classes.newInstance();
                     Method method = classes.getMethod("print",null);
