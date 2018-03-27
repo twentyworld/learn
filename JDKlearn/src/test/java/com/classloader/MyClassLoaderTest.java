@@ -21,14 +21,14 @@ public class MyClassLoaderTest {
     public void testMyClassLoader() {
         System.out.println("testMyClassLoader");
         MyClassLoader classLoader = new MyClassLoader("C:\\Users\\w\\IdeaProjects\\learns\\JDKlearn\\src\\main\\resources\\classFile\\tsi");
-        Class classes  = null;
+//        Class classes  = null;
 //        try {
 //            classes = classLoader.loadClass("com.classloader.test.Test");
 //        } catch (ClassNotFoundException e) {
 //            e.printStackTrace();
 //        }
 
-        classes = classLoader.findClass("com.classloader.test.Test");
+        Class classes = classLoader.findClass("com.classloader.test.Test");
         Assert.assertTrue(invokeMethod(classes).equals("this is a new test about classLoader."));
     }
 
@@ -50,12 +50,14 @@ public class MyClassLoaderTest {
     @Test
     public void testMyClassLoaderFirst() {
         MyClassLoader classLoader = new MyClassLoader("C:\\Users\\w\\IdeaProjects\\learns\\JDKlearn\\src\\main\\resources\\classFile\\tsi");
-        Class classes  = null;
-        try {
-            classes = classLoader.loadClass("com.classloader.test.Test");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+//        Class classes  = null;
+//        try {
+//            classes = classLoader.loadClass("com.classloader.test.Test");
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
+
+        Class classes = classLoader.findClass("com.classloader.test.Test");
         String MyClassLoader = invokeMethod(classes);
 
 
@@ -89,24 +91,10 @@ public class MyClassLoaderTest {
         String defaultClassLoader = invokeMethod(classes2);
 
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                MyClassLoader classLoader = new MyClassLoader("C:\\Users\\w\\IdeaProjects\\learns\\JDKlearn\\src\\main\\resources\\classFile\\tsi");
-                Class classes  = null;
-                try {
-                    classes = classLoader.loadClass("com.classloader.test.Test");
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
-                String MyClassLoader = invokeMethod(classes);
-
-                System.out.println(MyClassLoader);
-            }
-        }).start();
-
-
-
+        MyClassLoader classLoader = new MyClassLoader("C:\\Users\\w\\IdeaProjects\\learns\\JDKlearn\\src\\main\\resources\\classFile\\tsi");
+        Class classes = classLoader.findClass("com.classloader.test.Test");
+        String MyClassLoader = invokeMethod(classes);
+        Assert.assertFalse(MyClassLoader.equals(defaultClassLoader));
 
 //        System.out.println(MyClassLoader);
 //        System.out.println(defaultClassLoader);
@@ -114,7 +102,10 @@ public class MyClassLoaderTest {
     }
 
 
+    @Test
+    public void testBothFromAppClassLoader() {
 
+    }
 
 
     private String invokeMethod(Class classes) {

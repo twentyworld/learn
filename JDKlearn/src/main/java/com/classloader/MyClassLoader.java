@@ -28,7 +28,7 @@ public class MyClassLoader extends ClassLoader {
                 name.substring(name.lastIndexOf(".") + 1) + ".class"
                 : name + ".class";
 
-//        System.out.println(name);
+        System.out.println(name);
         File file = new File(path, className);
         byte[] classContent = readFile(file);
 
