@@ -37,6 +37,12 @@ include 'Spring-boot:SpringBootMybatis'
 findProject(':Spring-boot:SpringBootMybatis')?.name = 'SpringBootMybatis'
 include 'Spring-boot:SpringBootSSL'
 findProject(':Spring-boot:SpringBootSSL')?.name = 'SpringBootSSL'
+
 include 'MybatisLearn:MyBatisOneTwoMany'
 findProject(':MybatisLearn:MyBatisOneTwoMany')?.name = 'MyBatisOneTwoMany'
+include 'Task'
+include 'Task:JNLPDemo'
+findProject(':Task:JNLPDemo')?.name = 'JNLPDemo'
+include 'Spring-boot:SpringBootThymeleaf'
+findProject(':Spring-boot:SpringBootThymeleaf')?.name = 'SpringBootThymeleaf'
 

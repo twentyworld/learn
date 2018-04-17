@@ -72,5 +72,4 @@ public class JnlpLocationResolver {
         return JnlpFileParser.parseFileToEntity(file);
     }
 
-
 }
