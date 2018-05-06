@@ -7,46 +7,81 @@ package com.synchronizedDemo;
  */
 public class Message {
 
-    private String message;
+    private int number;
+    private static int numbers;
 
-    public synchronized String methodA() {
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("synchronized method a invoked." + Thread.currentThread());
+    public synchronized int methodA() {
 
-        return message;
-    }
-
-    public synchronized String methodB() {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println("synchronized method b invoked." + Thread.currentThread());
-
-        return message;
+        number = number +1;
+        return number;
     }
 
-    public String methodC() {
+    public synchronized int methodB() {
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        number = number +1;
+        return number;
+    }
+
+    public int methodC() {
         synchronized (this) {
+
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("synchronized method c invoked." + Thread.currentThread());
-
-            return message;
+            number = number +1;
+            return number;
         }
     }
 
-    public String methodD() {
-        System.out.println("synchronized method d invoked." + Thread.currentThread());
-        return message;
+    public int methodD() {
+        number = number +1;
+        return number;
     }
+    public static synchronized int methodE() {
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        numbers = numbers +1;
+        return numbers;
+
+    }
+    public synchronized int methodF() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        numbers = numbers +1;
+        return numbers;
+    }
+
+    public int methodG() {
+        synchronized (Message.class) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            numbers = numbers +1;
+            return numbers;
+        }
+    }
+
+
 
 }

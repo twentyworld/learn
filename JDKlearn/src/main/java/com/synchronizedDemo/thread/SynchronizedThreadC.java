@@ -29,7 +29,7 @@ public class SynchronizedThreadC implements Runnable {
      */
     @Override
     public void run() {
-        object.methodC();
+        System.out.println(Thread.currentThread().getName() + ", method c, number= "+ object.methodC());
 
 
     }

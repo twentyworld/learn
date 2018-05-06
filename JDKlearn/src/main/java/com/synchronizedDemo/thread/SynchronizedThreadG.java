@@ -3,19 +3,21 @@ package com.synchronizedDemo.thread;
 import com.synchronizedDemo.Message;
 
 /**
- * Created by temper on 2018/5/6,上午4:43.
- * copy as you like, but with these word.
- * at last, The forza horizon is really fun, buy is made, looking forward to driving together in the hurricane.
+ * Created by teemper on 2018/5/7, 0:29.
+ *
+ * @author Zed.
+ * <p>
+ * copy as you like, but with these words.
+ * please kindly write to teempe@163.com if anthing.
+ * from win.
  */
-public class SynchronizedThreadB implements Runnable {
+public class SynchronizedThreadG implements Runnable{
 
+    private Message message;
 
-    private Message object;
-
-    public SynchronizedThreadB(Message object) {
-        this.object = object;
+    public SynchronizedThreadG(Message object) {
+        this.message = object;
     }
-
     /**
      * When an object implementing interface <code>Runnable</code> is used
      * to create a thread, starting the thread causes the object's
@@ -29,7 +31,6 @@ public class SynchronizedThreadB implements Runnable {
      */
     @Override
     public void run() {
-        System.out.println(Thread.currentThread().getName() + ", method b, number= "+ object.methodB());
-
+        System.out.println(Thread.currentThread().getName() + ", method g, number= "+ message.methodG());
     }
 }

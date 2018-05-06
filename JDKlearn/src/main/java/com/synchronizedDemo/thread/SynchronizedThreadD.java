@@ -29,8 +29,6 @@ public class SynchronizedThreadD implements Runnable {
      */
     @Override
     public void run() {
-        object.methodD();
-
-
+        System.out.println(Thread.currentThread().getName() + ", method d, number= "+ object.methodD());
     }
 }

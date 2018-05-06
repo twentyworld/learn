@@ -13,19 +13,19 @@ import com.synchronizedDemo.thread.SynchronizedThreadC;
  * please kindly write to teempe@163.com if anthing.
  * from win.
  */
-public class SynchronizedInstanceTest {
+public class SynchSameInstanceTest {
     public static void main(String[] args) {
         Message object1 = new Message();
 
-        for (int i = 0;i<3 ;i++) {
+        for (int i = 0; i < 3; i++) {
             new Thread(new SynchronizedThreadA(object1)).start();
         }
 
-        for (int i = 0;i<3 ;i++) {
+        for (int i = 0; i < 3; i++) {
             new Thread(new SynchronizedThreadB(object1)).start();
         }
 
-        for (int i = 0;i<3 ;i++) {
+        for (int i = 0; i < 3; i++) {
             new Thread(new SynchronizedThreadC(object1)).start();
         }
 
