@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="HibernateJpa_main" target="1.8" />
+      <module name="HibernateJpa_test" target="1.8" />
+      <module name="HibernateLearn_main" target="1.8" />
+      <module name="HibernateLearn_test" target="1.8" />
+      <module name="JavaListenerLearn_main" target="1.8" />
+      <module name="JavaListenerLearn_test" target="1.8" />
+      <module name="JDKlearn_main" target="1.8" />
+      <module name="JDKlearn_test" target="1.8" />
+      <module name="learn_main" target="1.8" />
+      <module name="learn_test" target="1.8" />
+      <module name="NettyLearn_main" target="1.8" />
+      <module name="NettyLearn_test" target="1.8" />
+      <module name="Oauth2Learn_main" target="1.8" />
+      <module name="Oauth2Learn_test" target="1.8" />
+      <module name="Spring-ApplicationListener-Event_main" target="1.8" />
+      <module name="Spring-ApplicationListener-Event_test" target="1.8" />
+      <module name="Spring-Cloud-Config_main" target="1.8" />
+      <module name="Spring-Cloud-Config_test" target="1.8" />
+      <module name="Spring-CLoud-Eureka_main" target="1.8" />
+      <module name="Spring-CLoud-Eureka_test" target="1.8" />
+      <module name="Spring-Cloud_main" target="1.8" />
+      <module name="Spring-Cloud_test" target="1.8" />
+      <module name="Spring-Data_main" target="1.8" />
+      <module name="Spring-Data_test" target="1.8" />
+      <module name="SpringBootMybatis_main" target="1.8" />
+      <module name="SpringBootMybatis_test" target="1.8" />
+      <module name="SpringBootSSL_main" target="1.8" />
+      <module name="SpringBootSSL_test" target="1.8" />
+      <module name="SpringCloud-Client1_main" target="1.8" />
+      <module name="SpringCloud-Client1_test" target="1.8" />
+      <module name="SpringCloud-Client2_main" target="1.8" />
+      <module name="SpringCloud-Client2_test" target="1.8" />
+      <module name="SpringCloud-Zuul_main" target="1.8" />
+      <module name="SpringCloud-Zuul_test" target="1.8" />
+      <module name="SpringLearn_main" target="1.8" />
+      <module name="SpringLearn_test" target="1.8" />
+      <module name="SpringSecurityLearn_main" target="1.8" />
+      <module name="SpringSecurityLearn_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

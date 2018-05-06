@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.diffplug.matsim:matfilerw:3.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.matsim/matfilerw/3.0.1/e48fa2c83a12ba48766d974b4d688b4ae5b81017/matfilerw-3.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.diffplug.matsim/matfilerw/3.0.1/c87aa0e14759c96e511d3a25de7b06968dbc0519/matfilerw-3.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

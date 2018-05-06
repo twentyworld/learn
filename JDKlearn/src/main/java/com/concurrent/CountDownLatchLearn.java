@@ -18,7 +18,7 @@ public class CountDownLatchLearn {
             new Thread(new CountDownLatchThread(countDownLatch)).start();
         }
 
-        System.out.println("waiting two threads running off.");
+        System.out.println("waiting  threads running off.");
         try {
             countDownLatch.await();
             System.out.println("main thread running.");
