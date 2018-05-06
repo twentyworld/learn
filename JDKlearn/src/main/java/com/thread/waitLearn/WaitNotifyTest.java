@@ -10,6 +10,7 @@ package com.thread.waitLearn;
  * from win.
  */
 
+
 public class WaitNotifyTest {
 
     public static void main(String[] args) {
