@@ -13,10 +13,10 @@ import com.synchronizedDemo.thread.SynchronizedThreadD;
 public class TestClass {
     public static void main(String[] args) {
 
-        TestObject object1 = new TestObject();
-        TestObject object2 = new TestObject();
-        TestObject object3 = new TestObject();
-        TestObject object4 = new TestObject();
+        Message object1 = new Message();
+        Message object2 = new Message();
+        Message object3 = new Message();
+        Message object4 = new Message();
 
 
 //        SynchronizedThreadA threadA = new SynchronizedThreadA(object1);

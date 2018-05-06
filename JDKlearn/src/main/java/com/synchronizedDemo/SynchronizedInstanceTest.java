@@ -15,7 +15,7 @@ import com.synchronizedDemo.thread.SynchronizedThreadC;
  */
 public class SynchronizedInstanceTest {
     public static void main(String[] args) {
-        TestObject object1 = new TestObject();
+        Message object1 = new Message();
 
         for (int i = 0;i<3 ;i++) {
             new Thread(new SynchronizedThreadA(object1)).start();

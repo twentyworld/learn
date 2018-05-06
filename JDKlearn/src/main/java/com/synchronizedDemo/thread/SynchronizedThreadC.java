@@ -1,6 +1,6 @@
 package com.synchronizedDemo.thread;
 
-import com.synchronizedDemo.TestObject;
+import com.synchronizedDemo.Message;
 
 /**
  * Created by temper on 2018/5/6,上午4:43.
@@ -10,9 +10,9 @@ import com.synchronizedDemo.TestObject;
 public class SynchronizedThreadC implements Runnable {
 
 
-    private TestObject object;
+    private Message object;
 
-    public SynchronizedThreadC(TestObject object) {
+    public SynchronizedThreadC(Message object) {
         this.object = object;
     }
 
