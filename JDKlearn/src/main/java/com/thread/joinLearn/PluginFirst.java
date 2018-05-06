@@ -21,5 +21,4 @@ public class PluginFirst implements Runnable {
         }
         System.out.println("插件1完成安装.");
     }
-
 }

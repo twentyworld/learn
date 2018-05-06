@@ -1,18 +1,18 @@
-package com.synchronizedDemo.synchronizedInstance.thread;
+package com.synchronizedDemo.thread;
 
-import com.synchronizedDemo.synchronizedInstance.TestObject;
+import com.synchronizedDemo.TestObject;
 
 /**
  * Created by temper on 2018/5/6,上午4:43.
  * copy as you like, but with these word.
  * at last, The forza horizon is really fun, buy is made, looking forward to driving together in the hurricane.
  */
-public class SynchronizedThreadC implements Runnable {
+public class SynchronizedThreadB implements Runnable {
 
 
     private TestObject object;
 
-    public SynchronizedThreadC(TestObject object) {
+    public SynchronizedThreadB(TestObject object) {
         this.object = object;
     }
 
@@ -29,7 +29,7 @@ public class SynchronizedThreadC implements Runnable {
      */
     @Override
     public void run() {
-        object.methodC();
+        object.methodB();
 
 
     }

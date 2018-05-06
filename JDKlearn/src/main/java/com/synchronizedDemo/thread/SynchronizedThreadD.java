@@ -1,6 +1,6 @@
-package com.synchronizedDemo.synchronizedInstance.thread;
+package com.synchronizedDemo.thread;
 
-import com.synchronizedDemo.synchronizedInstance.TestObject;
+import com.synchronizedDemo.TestObject;
 
 /**
  * Created by temper on 2018/5/6,上午4:43.

@@ -9,7 +9,7 @@ package com.thread.joinLearn;
  * please kindly write to teempe@163.com if anthing.
  * from win.
  */
-public class PluginSecond implements Runnable{
+public class PluginSecond implements Runnable {
 
     @Override
     public void run() {

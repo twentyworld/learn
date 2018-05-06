@@ -1,4 +1,4 @@
-package com.synchronizedDemo.synchronizedInstance;
+package com.synchronizedDemo;
 
 /**
  * Created by temper on 2018/5/6,上午4:35.
@@ -7,9 +7,9 @@ package com.synchronizedDemo.synchronizedInstance;
  */
 public class TestObject {
 
-    private String name;
+    private String message;
 
-    public synchronized String methodA(){
+    public synchronized String methodA() {
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {
@@ -17,7 +17,7 @@ public class TestObject {
         }
         System.out.println("synchronized method a invoked." + Thread.currentThread());
 
-        return "a";
+        return message;
     }
 
     public synchronized String methodB() {
@@ -28,8 +28,9 @@ public class TestObject {
         }
         System.out.println("synchronized method b invoked." + Thread.currentThread());
 
-        return "b";
+        return message;
     }
+
     public String methodC() {
         synchronized (this) {
             try {
@@ -39,13 +40,13 @@ public class TestObject {
             }
             System.out.println("synchronized method c invoked." + Thread.currentThread());
 
-            return "c";
+            return message;
         }
     }
 
     public String methodD() {
         System.out.println("synchronized method d invoked." + Thread.currentThread());
-        return "d";
+        return message;
     }
 
 }

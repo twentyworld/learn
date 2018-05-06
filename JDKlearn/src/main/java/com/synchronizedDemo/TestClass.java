@@ -1,9 +1,9 @@
-package com.synchronizedDemo.synchronizedInstance;
+package com.synchronizedDemo;
 
-import com.synchronizedDemo.synchronizedInstance.thread.SynchronizedThreadA;
-import com.synchronizedDemo.synchronizedInstance.thread.SynchronizedThreadB;
-import com.synchronizedDemo.synchronizedInstance.thread.SynchronizedThreadC;
-import com.synchronizedDemo.synchronizedInstance.thread.SynchronizedThreadD;
+import com.synchronizedDemo.thread.SynchronizedThreadA;
+import com.synchronizedDemo.thread.SynchronizedThreadB;
+import com.synchronizedDemo.thread.SynchronizedThreadC;
+import com.synchronizedDemo.thread.SynchronizedThreadD;
 
 /**
  * Created by temper on 2018/5/6,上午4:40.
