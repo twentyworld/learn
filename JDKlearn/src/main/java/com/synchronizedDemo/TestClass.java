@@ -40,8 +40,6 @@ public class TestClass {
             System.out.println("object1 thread"+i);
         }
 
-
-
         for (int i = 0; i<3 ;i++) {
             new Thread(new SynchronizedThreadD(object1)).start();
         }
