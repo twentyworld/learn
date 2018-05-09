@@ -1,6 +1,6 @@
-package com.lock.reentrantLock;
+package com.lock.reentrantLock.reentrantLockApi;
 
-import com.lock.reentrantLock.thread.LockInterruptiblyThread;
+import com.lock.reentrantLock.reentrantLockApi.thread.LockInterruptiblyThread;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

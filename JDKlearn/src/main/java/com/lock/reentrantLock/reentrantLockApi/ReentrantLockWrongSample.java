@@ -1,6 +1,6 @@
-package com.lock.reentrantLock;
+package com.lock.reentrantLock.reentrantLockApi;
 
-import com.lock.reentrantLock.thread.WrongSampleThread;
+import com.lock.reentrantLock.reentrantLockApi.thread.WrongSampleThread;
 
 import java.util.ArrayList;
 
@@ -23,6 +23,8 @@ public class ReentrantLockWrongSample {
         WrongSampleThread thread2 = new WrongSampleThread(arrayList);
 
         new Thread(thread1).start();
+        new Thread(thread1).start();
+        new Thread(thread2).start();
         new Thread(thread2).start();
 
     }

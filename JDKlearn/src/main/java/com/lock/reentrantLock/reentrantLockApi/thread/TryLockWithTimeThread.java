@@ -1,4 +1,4 @@
-package com.lock.reentrantLock.thread;
+package com.lock.reentrantLock.reentrantLockApi.thread;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -37,7 +37,7 @@ public class TryLockWithTimeThread implements Runnable {
     @Override
     public void run() {
         try {
-            if (lock.tryLock(1, TimeUnit.MICROSECONDS)) {
+            if (lock.tryLock(5, TimeUnit.SECONDS)) {
                 try {
                     System.out.println(Thread.currentThread() + "得到了锁");
                     for (int i = 0; i < 10; i++) {

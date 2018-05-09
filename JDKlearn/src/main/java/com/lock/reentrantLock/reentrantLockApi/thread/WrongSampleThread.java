@@ -1,4 +1,4 @@
-package com.lock.reentrantLock.thread;
+package com.lock.reentrantLock.reentrantLockApi.thread;
 
 import java.util.ArrayList;
 import java.util.concurrent.locks.Lock;

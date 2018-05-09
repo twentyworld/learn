@@ -30,7 +30,7 @@ public class ArrayBuffer {
     public String read() {
         lock.lock();
         try {
-            String temp = null;
+
             if (count == 0) {
                 try {
                     System.out.println("buffer is empty");
@@ -40,14 +40,11 @@ public class ArrayBuffer {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
-            } else {
-                System.out.println("takePoint: " + takePoint);
-                temp = array[takePoint()];
-                count--;
-                takePoint++;
-
             }
+            System.out.println("takePoint: " + takePoint);
+            String temp = array[takePoint()];
+            count--;
+            takePoint++;
             return temp;
         }finally {
             lock.unlock();
@@ -57,25 +54,22 @@ public class ArrayBuffer {
     public void put(String number) {
         lock.lock();
         try{
-            if (count<array.length){
-
-                array[putPoint()] = number;
-                count++;
-                System.out.println("putPoint: " + putPoint);
-                putPoint++;
-
-            }else{
+            if (count>=array.length){
                 try {
                     System.out.println("buffer is full.");
                     read.signal();
                     write.await();
-//                    read.signal();
                     System.out.println("count: " + count);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
             }
+
+            array[putPoint()] = number;
+            count++;
+            System.out.println("putPoint: " + putPoint);
+            putPoint++;
+
 
         }finally {
             lock.unlock();

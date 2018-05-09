@@ -18,6 +18,5 @@ public class ConditionOnReadWriteLearn {
         new Thread(write).start();
         new Thread(read).start();
 
-
     }
 }

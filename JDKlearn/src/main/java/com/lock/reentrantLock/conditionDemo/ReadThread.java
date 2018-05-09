@@ -32,7 +32,7 @@ public class ReadThread implements Runnable {
     public void run() {
         System.out.println("read running.");
         for (int i =0;i<500;i++) {
-            System.out.println("read result:   " + buffer.read());
+            System.out.println("read result: " + buffer.read());
 
         }
     }

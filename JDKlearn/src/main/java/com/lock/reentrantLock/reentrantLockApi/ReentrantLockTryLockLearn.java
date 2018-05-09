@@ -1,7 +1,7 @@
-package com.lock.reentrantLock;
+package com.lock.reentrantLock.reentrantLockApi;
 
-import com.lock.reentrantLock.thread.TryLockThread;
-import com.lock.reentrantLock.thread.TryLockWithTimeThread;
+import com.lock.reentrantLock.reentrantLockApi.thread.TryLockThread;
+import com.lock.reentrantLock.reentrantLockApi.thread.TryLockWithTimeThread;
 
 import java.util.ArrayList;
 import java.util.List;

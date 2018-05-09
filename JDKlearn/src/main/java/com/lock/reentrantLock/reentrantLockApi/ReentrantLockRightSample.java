@@ -1,6 +1,6 @@
-package com.lock.reentrantLock;
+package com.lock.reentrantLock.reentrantLockApi;
 
-import com.lock.reentrantLock.thread.RightSampleThread;
+import com.lock.reentrantLock.reentrantLockApi.thread.RightSampleThread;
 
 import java.util.ArrayList;
 import java.util.concurrent.locks.Lock;
