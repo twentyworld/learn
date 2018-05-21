@@ -1,39 +1,16 @@
 group 'Learn'
 version '1.0-SNAPSHOT'
 
-buildscript {
-    repositories {
-        jcenter()
-        maven { url "http://repo.spring.io/libs-snapshot-local" }
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE")
-    }
-}
-apply plugin: 'spring-boot'
 apply plugin: 'idea'
-ext {
-    name = 'Eureka Server'
-    description = 'Eureka Server demo project'
-    version='0.0.1-SNAPSHOT'
-    sourceEncoding='UTF-8'
-}
+apply plugin: 'java'
 repositories {
-    jcenter()
-    mavenCentral()
-
-    maven { url 'https://repo.spring.io/release/' }
-    maven { url "http://repo.spring.io/libs-snapshot-local" }
-    maven { url "http://repo.spring.io/libs-milestone-local" }
-    maven { url "http://repo.spring.io/libs-release-local" }
-}
-dependencyManagement {
-    imports {
-        mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.BUILD-SNAPSHOT"
+    repositories {
+        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
     }
 }
+
 dependencies {
-    compile 'org.springframework.cloud:spring-cloud-starter-eureka-server'
-    testCompile 'org.springframework.boot:spring-boot-starter-test'
-    testCompile "junit:junit"
+    compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-eureka-server', version: '1.4.4.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
 }
