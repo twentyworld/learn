@@ -22,9 +22,14 @@ public class DogProxyHandler implements InvocationHandler {
     }
 
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("代理调用前");
-        System.out.println(method.getName() + method.getModifiers());
-        return method.invoke(proxyied, args);
+        System.out.println("before invoked...");
+//        System.out.println(method.getName() + method.getModifiers());
+
+        Object object = method.invoke(proxyied, args);
+
+        System.out.println("after invoked...");
+
+        return object;
     }
 
 }

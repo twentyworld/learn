@@ -13,6 +13,7 @@ package com.proxy.com;
 public class Dog implements Animal {
     @Override
     public String sound() {
-        return "Wang, Wang, Wang";
+        System.out.println( "Wang, Wang, Wang");
+        return "this";
     }
 }

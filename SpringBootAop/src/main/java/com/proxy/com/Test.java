@@ -1,5 +1,8 @@
 package com.proxy.com;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Proxy;
 
 /**
@@ -13,14 +16,28 @@ import java.lang.reflect.Proxy;
  * from win.
  */
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+
+
+//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+//
+//        Class proxy = Proxy.getProxyClass(Animal.class.getClassLoader(), Animal.class);
+//        Constructor constructor = proxy.getConstructor(InvocationHandler.class);
+//
+//        Animal animal = (Animal) constructor.newInstance(new DogProxyHandler(new Dog()));
+//
+//        animal.sound();
+
+
+
         Dog dog = new Dog();
 
-        Animal animal = (Animal) Proxy.newProxyInstance(Animal.class.getClassLoader()
-                                                ,new Class[]{Animal.class}
-                                                ,new DogProxyHandler(dog));
+        Animal animal = (Animal) Proxy.newProxyInstance(
+                        Animal.class.getClassLoader(),
+                        new Class[]{Animal.class},
+                        new DogProxyHandler(dog));
 
-        System.out.println(animal.sound());
+        animal.sound();
 
     }
 }

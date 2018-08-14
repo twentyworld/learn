@@ -1,4 +1,4 @@
-package com.learn.SqlProvider;
+package com.learn.mapper.SqlProvider;
 
 /**
  * Created by teemper on 2017/12/8, 19:33.

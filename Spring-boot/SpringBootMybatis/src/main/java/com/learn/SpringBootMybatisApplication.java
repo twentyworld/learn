@@ -42,6 +42,10 @@ public class SpringBootMybatisApplication implements CommandLineRunner {
     @Autowired
     @Qualifier("secondarySqlSessionFactory")
     SqlSessionFactory secondarySqlSessionFactory;
+
+
+    @Autowired
+    UserMapper mapper;
     /**
      * Callback used to run the bean.
      *
@@ -61,6 +65,9 @@ public class SpringBootMybatisApplication implements CommandLineRunner {
 
         primaryDataSourceExecute();
         secondaryDataSourceExecute();
+
+        System.out.println("----------------------");
+        System.out.println(mapper.findById(1));
     }
 
 

@@ -1,6 +1,6 @@
 package com.learn.mapper;
 
-import com.learn.SqlProvider.UserSqlProvider;
+import com.learn.mapper.SqlProvider.UserSqlProvider;
 import com.learn.domain.User;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Component;

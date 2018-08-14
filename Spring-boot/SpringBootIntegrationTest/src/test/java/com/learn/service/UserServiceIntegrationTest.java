@@ -29,7 +29,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(classes = SpringBootMybatisApplication.class)
 @ActiveProfiles("test")
 @TestPropertySource(locations = {"classpath:test/application-test.properties"})
-public class IntegrationTest {
+public class UserServiceIntegrationTest {
     @Autowired
     UserService service;
 
