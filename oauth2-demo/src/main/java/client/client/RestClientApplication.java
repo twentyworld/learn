@@ -69,7 +69,7 @@ public class RestClientApplication implements CommandLineRunner {
     }
 
     private String getToken() {
-        String url = "http://localhost:8090/oauth/token?grant_type=client_credentials&scope=select&client_id=client_1&client_secret=123456";
+        String url = "http://localhost:8090/oauth/token?grant_type=client_credentials&scope=ROLE_SELECT&client_id=client_1&client_secret=123456";
 
         String result = template.getForObject(url, String.class);
         String token = null;
