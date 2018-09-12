@@ -57,4 +57,7 @@ include 'SpringBootAop'
 include 'SpringBootIntegrationTest'
 include 'Spring-Boot-Vertx-Integration'
 include 'Jackson-learn'
+include 'SpringBoot-Inteceptor-Filter'
+include 'oauth2-demo'
+include 'SpringBoot2-Oauth2-Client-Credentials-Seperate'
 

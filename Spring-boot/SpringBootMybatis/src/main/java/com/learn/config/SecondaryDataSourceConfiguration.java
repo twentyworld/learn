@@ -25,16 +25,16 @@ import javax.sql.DataSource;
  */
 @Configuration
 public class SecondaryDataSourceConfiguration {
-    @Bean(name="secondaryDataSource")
+    @Bean(name = "secondaryDataSource")
     @Qualifier("secondaryDataSource")
     @ConfigurationProperties(prefix = "spring.datasource.secondary")
-    public DataSource secondaryDataSource(){
+    public DataSource secondaryDataSource() {
         return DataSourceBuilder.create().build();
     }
 
     @Bean(name = "secondarySqlSessionFactory")
     @Qualifier("secondarySqlSessionFactory")
-    public SqlSessionFactory secondarySqlSessionFactory(@Qualifier("secondaryDataSource")DataSource dataSource) throws Exception{
+    public SqlSessionFactory secondarySqlSessionFactory(@Qualifier("secondaryDataSource") DataSource dataSource) throws Exception {
         TransactionFactory transactionFactory = new JdbcTransactionFactory();
         Environment environment = new Environment("development", transactionFactory, dataSource);
         org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration(environment);
