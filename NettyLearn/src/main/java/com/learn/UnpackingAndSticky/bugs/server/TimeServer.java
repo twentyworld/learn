@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.learn.TimeHandler.netty;
+package com.learn.UnpackingAndSticky.bugs.server;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -64,13 +64,7 @@ public class TimeServer {
      */
     public static void main(String[] args) throws Exception {
         int port = 8080;
-        if (args!=null && args.length > 0) {
-            try {
-                port = Integer.valueOf(args[0]);
-            } catch (NumberFormatException e) {
-                // 采用默认值
-            }
-        }
+
         new TimeServer().bind(port);
     }
 }
