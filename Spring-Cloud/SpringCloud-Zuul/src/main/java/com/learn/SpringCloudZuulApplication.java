@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.client.ClientHttpRequestFactory;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
@@ -52,8 +53,10 @@ public class SpringCloudZuulApplication {
         }
         FileInputStream fileInputStream = null;
         try {
-            fileInputStream = new FileInputStream(new File("C:\\Users\\w\\IdeaProjects\\learn\\SpringCloud-Zuul\\src\\main\\resources\\sample.jks"));
+            fileInputStream = new FileInputStream(new ClassPathResource("sample.jks").getFile());
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
