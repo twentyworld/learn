@@ -32,4 +32,9 @@ public class TestController {
     }
 
 
+    @ModelAttribute
+    public void setHeader(HttpServletResponse response) {
+        System.out.println("ModelAttribute");
+        response.setHeader("header", "cool");
+    }
 }
