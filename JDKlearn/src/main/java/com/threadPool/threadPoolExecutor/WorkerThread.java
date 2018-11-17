@@ -1,4 +1,4 @@
-package com.threadPool;
+package com.threadPool.threadPoolExecutor;
 
 /**
  * Created by teemper on 2018/7/15, 20:14.

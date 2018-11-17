@@ -11,12 +11,19 @@ import org.springframework.beans.factory.annotation.Qualifier;
  * from win.
  */
 public class Product {
+
     private AccountBean accountBean;
     private String name;
 
 
     public AccountBean getAccountBean() {
         return accountBean;
+    }
+
+
+    public Product(AccountBean accountBean, String name) {
+        this.accountBean = accountBean;
+        this.name = name;
     }
 
     @Autowired

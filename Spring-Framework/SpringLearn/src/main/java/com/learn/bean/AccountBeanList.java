@@ -1,5 +1,7 @@
 package com.learn.bean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.List;
 
 /**
@@ -11,6 +13,8 @@ import java.util.List;
  */
 public class AccountBeanList {
     private List<AccountBean> accountBeanList;
+
+    @Autowired
     private String name;
 
     public AccountBeanList() {

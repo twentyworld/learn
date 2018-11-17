@@ -16,7 +16,6 @@ import factory.AbstractFactory.factory.impl.WindowsFactory;
  */
 public class Client {
 
-
     public static void main(String[] args) {
         AbstractFactory linuxFactory = new LinuxFactory();
         linuxFactory.createButton().processEvent();
@@ -26,6 +25,5 @@ public class Client {
         windowsFactory.createButton().processEvent();
         windowsFactory.createText().getWholeText();
     }
-
 
 }
